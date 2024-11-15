@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.todoBody {
+  background-color: red;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  position: absolute;
+}
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  width: 25%;
+  border-radius: 20px;
+  margin: 100px auto 20px;
+}
+.content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.content img {
+  width: 27px;
+  height: 27px;
+}
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+.container input {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background: transparent;
+}
+.container button {
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  right: 50px;
+  cursor: pointer;
+  background-color: #ff5945;
+  color: #fff;
+  font-size: 16px;
+}
+
+.listItem li {
+  text-decoration: none;
+  list-style: none;
+  border: 1px solid;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 12px 8px 12px 40px;
+  user-select: none;
+  position: relative;
+  font-size: 18px;
+  /* display: flex;
+ justify-content: space-between;
+ align-items: center; */
+}
+.listItem li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 10px;
+  background-image: url(img/unchecked.png);
+  background-size: cover;
+  background-position: center;
+}
+.listItem li span {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 22px;
+  color: #555;
+  border-radius: 40%;
+}
+.listItem li span:hover {
+  background: #edeef0;
+}
+.listItem li.checked {
+  text-decoration: line-through;
+  color: #555;
+}
+.listItem li.checked::before {
+  background-image: url(img/checked.png);
+}
+@media (max-width: 1250px) {
+  .container {
+    padding: 15px;
+    width: 45%;
+    margin: 50px auto 20px;
+  }
+}
+@media (max-width: 750px) {
+  .container {
+    padding: 15px;
+    width: 75%;
+    margin: 50px auto 20px;
+  }
+}
+
+@media ( max-width: 450px) {
+  .container {
+    padding: 15px;
+    width: 95%;
+    margin: 50px auto 20px;
+  }
+  .content h1 {
+    font-size: 30px;
+  }
+}
+
+
