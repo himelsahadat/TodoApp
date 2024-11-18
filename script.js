@@ -2,7 +2,7 @@ const listItem = document.querySelector(".listItem");
 const inputbox = document.getElementById("input-box");
 
 function addList() {
-  if (inputbox.value == " ") {
+  if (inputbox.value.trim() === '') {
     alert("You must filled with somethings");
   } else {
     let li = document.createElement("li");
@@ -12,7 +12,7 @@ function addList() {
     span.innerHTML = "\u00d7";
     li.appendChild(span);
   }
-  inputbox.value = " ";
+  inputbox.value = '';
   saveTodo();
 }
 
